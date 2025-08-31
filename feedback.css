@@ -1,0 +1,149 @@
+body, html {
+  background-image: url("web.jpg");
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  
+  min-height: 100vh;
+}
+
+.feedback-bg {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.feedback-card {
+  background:  transparent;
+  padding: 32px 24px;
+  border-radius: 18px;
+  box-shadow: 0 4px 16px rgba(255, 255, 255, 0.15);
+  max-width: 500px;
+  width: 100%;
+  margin: 32px 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.feedback-card h2 {
+  margin-bottom: 24px;
+  color: #2575fc;
+  font-size: 2rem;
+  font-weight: 700;
+  text-align: center;
+}
+
+.form-group {
+  width: 100%;
+  margin-bottom: 18px;
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  margin-bottom: 7px;
+  color: #4f5b6b;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+input[type="text"],
+input[type="email"],
+select,
+textarea {
+  padding: 10px;
+  border: 1px solid #bfc9d8;
+  border-radius: 7px;
+  font-size: 1rem;
+  outline: none;
+  transition: border-color 0.2s;
+  background: #f1ecec;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+select:focus,
+textarea:focus {
+  border-color: #2575fc;
+}
+
+textarea {
+  resize: vertical;
+  min-height: 60px;
+  max-height: 180px;
+}
+
+.rating-group {
+  margin-bottom: 24px;
+}
+
+.rating {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: flex-start;
+  gap: 4px;
+}
+
+.rating input[type="radio"] {
+  display: none;
+}
+
+.rating label {
+  font-size: 2rem;
+  color: #bfc9d8;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.rating input[type="radio"]:checked ~ label,
+.rating label:hover,
+.rating label:hover ~ label {
+  color: #ffd700;
+}
+
+button[type="submit"] {
+  width: 100%;
+  background: linear-gradient(90deg, #2575fc 0%, #6a11cb 100%);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 12px 0;
+  font-size: 1.1rem;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(102,166,255,0.12);
+  transition: background 0.3s, transform 0.2s;
+  margin-top: 8px;
+}
+
+button[type="submit"]:hover {
+  background: linear-gradient(90deg, #6a11cb 0%, #2575fc 100%);
+  transform: scale(1.03);
+}
+
+footer {
+  background: rgba(255,255,255,0.7);
+  color: #2575fc;
+  text-align: center;
+  padding: 12px 0;
+  font-size: 1rem;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  border-top: 1px solid rgba(0,0,0,0.07);
+  z-index: 10;
+}
+
+@media (max-width: 600px) {
+  .feedback-card {
+    padding: 18px 8px;
+    margin: 16px 4px;
+  }
+  .feedback-card h2 {
+    font-size: 1.3rem;
+    line-height: 1.4;
+  
+  }}

@@ -1,0 +1,180 @@
+/* ===== Body Style ===== */
+body {
+    background-image: url("web.jpg"); 
+    min-height: 100vh;
+    margin: 0;
+    padding: 20px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+/* ===== Main Content Centering ===== */
+main {
+    flex: 1;   
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px;
+}
+
+/* ===== Container Box ===== */
+.container {
+    background: #eee3e3;
+    padding: 25px 20px;
+    border-radius: 16px;
+    box-shadow: 0 8px 32px rgba(102,166,255,0.15);
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 400px;   /* ✅ responsive box */
+}
+
+/* ===== Heading ===== */
+h1 {
+    margin-bottom: 20px;
+    color: #2d3a4b;
+    font-size: 1.8rem;
+    letter-spacing: 1px;
+    display: flex;
+    justify-content: center;
+}
+
+/* ===== Label ===== */
+label {
+    display: block;
+    margin-bottom: 8px;
+    color: #4f5b6b;
+    font-size: 0.95rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+/* ===== Input Field ===== */
+input[type="date"] {
+    display: block;
+    padding: 10px;
+    border: 1px solid #bfc9d8;
+    border-radius: 6px;
+    font-size: 1rem;
+    margin: 0 auto 14px auto;
+    width: 90%;               /* ✅ responsive */
+    max-width: 280px;         /* ✅ limit */
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+input[type="date"]:focus {
+    border-color: #66a6ff;
+}
+
+/* ===== Button Style ===== */
+button {
+    display: block;
+    margin: 0 auto;
+    background: #66a6ff;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    padding: 10px 24px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(102,166,255,0.12);
+    transition: background 0.3s, transform 0.2s;
+    width: 90%;
+    max-width: 300px;   /* ✅ button bhi responsive */
+}
+
+button:hover {
+    background: #4f8cff;
+    transform: translateY(-2px) scale(1.05);
+}
+
+/* ===== Footer (scroll ke baad bottom) ===== */
+footer {
+    background: rgba(255, 255, 255, 0.6);
+    backdrop-filter: blur(6px);
+    color: #2d3a4b;
+    text-align: center;
+    padding: 10px 0;
+    font-size: 0.9rem;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    border-top: 1px solid rgba(0,0,0,0.1);
+}
+
+.footer-content {
+    margin: 0 auto;
+}
+
+/* ===== Result Section ===== */
+#result {
+    margin-top: 18px;
+    font-size: 1.3rem;
+    color: #ffffff;
+    font-weight: 500;
+    min-height: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* ===== Top bar ===== */
+.top-bar {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 12px 20px;
+    background: linear-gradient(90deg, #6a11cb 0%, #2575fc 100%);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.feedback-btn {
+    padding: 10px 20px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #fff;
+    background: #2575fc;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    width: 60px;          /* ✅ fix */
+}
+
+.feedback-btn:hover {
+    background: #1a5edb;
+    transform: scale(1.05) translateX(5px);
+}
+
+/* ===== Responsive Media Queries ===== */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 1.5rem;
+    }
+    label {
+        font-size: 0.9rem;
+    }
+    button, input[type="date"] {
+        font-size: 0.95rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 20px 15px;
+    }
+    h1 {
+        font-size: 1.3rem;
+    }
+    .top-bar {
+        justify-content: center; /* ✅ mobile pe center */
+    }
+}
